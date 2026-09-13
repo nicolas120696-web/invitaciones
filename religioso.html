@@ -268,9 +268,33 @@
     .sec-dark { background: linear-gradient(180deg, #7d654c, #5c4a38); color: var(--white); padding: 3.4rem 1.5rem; text-align: center; }
     .sec-cream { background: linear-gradient(180deg, #f3ebe0, #ebe0d0); color: var(--ink); padding: 3.4rem 1.5rem; text-align: center; }
 
-    .floral-corner { position: absolute; width: 120px; pointer-events: none; opacity: 0.9; }
-    .floral-corner.tl { top: -6px; left: -6px; transform: rotate(-6deg); }
-    .floral-corner.br { bottom: -12px; right: -10px; transform: rotate(155deg); }
+    .floral-corner {
+      position: absolute;
+      width: min(42vw, 168px);
+      pointer-events: none;
+      opacity: 0.92;
+      z-index: 0;
+    }
+    .floral-corner.tl { top: -4px; left: -10px; transform: rotate(-4deg); }
+    .floral-corner.tr { top: -4px; right: -10px; transform: scaleX(-1) rotate(-4deg); }
+    .floral-corner.bl { bottom: -8px; left: -10px; transform: scaleY(-1) rotate(-4deg); }
+    .floral-corner.br { bottom: -8px; right: -10px; transform: scale(-1) rotate(-4deg); }
+
+    .sec-light .floral-corner,
+    .sec-cream .floral-corner { opacity: 0.78; }
+
+    .invite-frame {
+      position: relative;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .note-adults {
+      position: relative;
+      padding: 0.5rem 0.75rem;
+    }
+    .note-adults .script-title { margin-bottom: 0.85rem; }
+    .note-adults .body-text { max-width: 20.5rem; }
 
     .intro-text {
       font-family: "Cormorant Garamond", serif;
@@ -457,6 +481,8 @@
     .footer-bar { height: 52px; background: var(--mocha); }
 
     .reveal {
+      position: relative;
+      z-index: 1;
       opacity: 0;
       transform: translateY(24px);
       transition: opacity 0.85s ease, transform 0.85s ease;
@@ -530,13 +556,29 @@
     </header>
 
     <section class="sec-dark">
-      <svg class="floral-corner tl" viewBox="0 0 120 120" aria-hidden="true">
-        <g fill="none" stroke="#f5efe6" stroke-width="1.2">
-          <path d="M10 100c20-30 35-55 45-80"/>
-          <circle cx="52" cy="18" r="3.5" fill="#f5efe6" stroke="none" opacity="0.85"/>
-          <circle cx="62" cy="28" r="2.8" fill="#f5efe6" stroke="none" opacity="0.75"/>
-          <circle cx="70" cy="40" r="3" fill="#f5efe6" stroke="none" opacity="0.8"/>
-          <circle cx="42" cy="55" r="2.5" fill="#f5efe6" stroke="none" opacity="0.7"/>
+      <svg class="floral-corner tl" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#f5efe6" stroke-width="1.1" opacity="0.9">
+          <path d="M18 140c22-36 40-62 52-98"/>
+          <path d="M40 120c18-22 32-40 40-64"/>
+          <path d="M28 95c10-8 18-6 24 2"/>
+          <path d="M58 48c8-4 14-2 18 5"/>
+          <circle cx="70" cy="28" r="5" fill="#f7efe4" stroke="none" opacity="0.9"/>
+          <circle cx="82" cy="42" r="3.8" fill="#efe4d4" stroke="none" opacity="0.85"/>
+          <circle cx="64" cy="46" r="3.2" fill="#f7efe4" stroke="none" opacity="0.8"/>
+          <circle cx="94" cy="56" r="4.2" fill="#efe4d4" stroke="none" opacity="0.85"/>
+          <circle cx="54" cy="72" r="3.4" fill="#f7efe4" stroke="none" opacity="0.75"/>
+          <circle cx="78" cy="68" r="2.6" fill="#efe4d4" stroke="none" opacity="0.7"/>
+          <circle cx="48" cy="98" r="3" fill="#f7efe4" stroke="none" opacity="0.7"/>
+          <path d="M72 34c-1 6 1 11 5 14" stroke="#d8c8b0" stroke-width="0.9"/>
+        </g>
+      </svg>
+      <svg class="floral-corner tr" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#f5efe6" stroke-width="1.1" opacity="0.75">
+          <path d="M18 140c22-36 40-62 52-98"/>
+          <circle cx="70" cy="28" r="4.5" fill="#f7efe4" stroke="none" opacity="0.85"/>
+          <circle cx="84" cy="44" r="3.5" fill="#efe4d4" stroke="none" opacity="0.8"/>
+          <circle cx="60" cy="50" r="2.8" fill="#f7efe4" stroke="none" opacity="0.75"/>
+          <circle cx="92" cy="60" r="3.8" fill="#efe4d4" stroke="none" opacity="0.8"/>
         </g>
       </svg>
       <div class="reveal">
@@ -567,6 +609,24 @@
     </section>
 
     <section class="sec-light">
+      <svg class="floral-corner tl" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#9a8164" stroke-width="1" opacity="0.55">
+          <path d="M20 138c20-34 38-58 50-94"/>
+          <circle cx="70" cy="30" r="4.5" fill="#dcc9ae" stroke="none"/>
+          <circle cx="84" cy="44" r="3.4" fill="#e8d8c0" stroke="none"/>
+          <circle cx="62" cy="48" r="2.8" fill="#c4ae8f" stroke="none"/>
+          <circle cx="92" cy="58" r="3.6" fill="#dcc9ae" stroke="none"/>
+          <circle cx="52" cy="78" r="3" fill="#e8d8c0" stroke="none"/>
+        </g>
+      </svg>
+      <svg class="floral-corner br" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#9a8164" stroke-width="1" opacity="0.45">
+          <path d="M20 138c20-34 38-58 50-94"/>
+          <circle cx="72" cy="32" r="4" fill="#dcc9ae" stroke="none"/>
+          <circle cx="86" cy="48" r="3.2" fill="#e8d8c0" stroke="none"/>
+          <circle cx="58" cy="54" r="2.6" fill="#c4ae8f" stroke="none"/>
+        </g>
+      </svg>
       <div class="reveal">
         <div class="moment-photo">
           <img src="fotos/mirada-mar.jpg" alt="Sara y Joselito" loading="lazy" />
@@ -575,13 +635,28 @@
           <svg viewBox="0 0 48 48"><path d="M24 8v4"/><path d="M14 44V22l10-8 10 8v22"/><path d="M18 44V30h12v14"/><path d="M24 14c2 4 2 8 0 12"/></svg>
         </div>
         <h2 class="script-title">Ceremonia</h2>
-        <p class="place-name">Parroquia Ebenezer</p>
+        <p class="place-name">Iglesia Cristiana Ebenezer</p>
         <p class="place-time">7:00 p. m.</p>
         <a class="btn" href="https://maps.app.goo.gl/bWZFWVL3E5vsnWHq7" target="_blank" rel="noopener noreferrer">Ver ubicación</a>
       </div>
     </section>
 
     <section class="sec-cream">
+      <svg class="floral-corner tr" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#8f775c" stroke-width="1" opacity="0.5">
+          <path d="M22 136c18-32 36-56 48-90"/>
+          <circle cx="70" cy="32" r="4.2" fill="#d4c0a4" stroke="none"/>
+          <circle cx="84" cy="46" r="3.2" fill="#e2d3bc" stroke="none"/>
+          <circle cx="60" cy="52" r="2.7" fill="#c4ae8f" stroke="none"/>
+        </g>
+      </svg>
+      <svg class="floral-corner bl" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#8f775c" stroke-width="1" opacity="0.45">
+          <path d="M22 136c18-32 36-56 48-90"/>
+          <circle cx="74" cy="34" r="3.8" fill="#d4c0a4" stroke="none"/>
+          <circle cx="88" cy="50" r="3" fill="#e2d3bc" stroke="none"/>
+        </g>
+      </svg>
       <div class="reveal">
         <div class="icon-wrap" aria-hidden="true">
           <svg viewBox="0 0 48 48"><path d="M8 20l16-10 16 10v18H8V20z"/><path d="M8 20l16 10 16-10"/><path d="M24 30v18"/></svg>
@@ -606,12 +681,21 @@
     </section>
 
     <section class="sec-light">
-      <svg class="floral-corner br" viewBox="0 0 120 120" aria-hidden="true">
+      <svg class="floral-corner tl" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#7d654c" stroke-width="1" opacity="0.5">
+          <path d="M20 138c20-34 38-58 50-94"/>
+          <circle cx="70" cy="30" r="4.5" fill="#dcc9ae" stroke="none"/>
+          <circle cx="84" cy="44" r="3.4" fill="#e8d8c0" stroke="none"/>
+          <circle cx="62" cy="48" r="2.8" fill="#c4ae8f" stroke="none"/>
+        </g>
+      </svg>
+      <svg class="floral-corner br" viewBox="0 0 160 160" aria-hidden="true">
         <g fill="none" stroke="#7d654c" stroke-width="1.1" opacity="0.5">
-          <path d="M10 100c20-30 35-55 45-80"/>
-          <circle cx="52" cy="18" r="3.5" fill="#c4ae8f" stroke="none"/>
-          <circle cx="62" cy="28" r="2.8" fill="#d4c0a4" stroke="none"/>
-          <circle cx="70" cy="40" r="3" fill="#c4ae8f" stroke="none"/>
+          <path d="M18 140c22-36 40-62 52-98"/>
+          <circle cx="70" cy="28" r="4.2" fill="#c4ae8f" stroke="none"/>
+          <circle cx="84" cy="42" r="3.2" fill="#d4c0a4" stroke="none"/>
+          <circle cx="60" cy="50" r="2.8" fill="#e2d3bc" stroke="none"/>
+          <circle cx="94" cy="58" r="3.6" fill="#c4ae8f" stroke="none"/>
         </g>
       </svg>
       <div class="reveal">
@@ -625,7 +709,42 @@
       </div>
     </section>
 
+    <section class="sec-cream">
+      <svg class="floral-corner tl" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#8f775c" stroke-width="1" opacity="0.55">
+          <path d="M20 138c20-34 38-58 50-94"/>
+          <circle cx="70" cy="30" r="4.5" fill="#dcc9ae" stroke="none"/>
+          <circle cx="84" cy="44" r="3.4" fill="#e8d8c0" stroke="none"/>
+          <circle cx="62" cy="48" r="2.8" fill="#c4ae8f" stroke="none"/>
+          <circle cx="92" cy="58" r="3.6" fill="#dcc9ae" stroke="none"/>
+        </g>
+      </svg>
+      <svg class="floral-corner br" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#8f775c" stroke-width="1" opacity="0.5">
+          <path d="M22 136c18-32 36-56 48-90"/>
+          <circle cx="72" cy="32" r="4" fill="#d4c0a4" stroke="none"/>
+          <circle cx="86" cy="48" r="3.2" fill="#e2d3bc" stroke="none"/>
+          <circle cx="58" cy="54" r="2.6" fill="#c4ae8f" stroke="none"/>
+        </g>
+      </svg>
+      <div class="reveal note-adults">
+        <div class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M16 34c0-6 4-10 8-10s8 4 8 10"/><circle cx="24" cy="16" r="5"/><path d="M10 38c0-5 3-8 6-9"/><circle cx="12" cy="22" r="3.5"/><path d="M38 38c0-5-3-8-6-9"/><circle cx="36" cy="22" r="3.5"/></svg>
+        </div>
+        <h2 class="script-title">Una noche especial</h2>
+        <p class="body-text">Con el deseo de compartir una velada tranquila y memorable junto a ustedes, les pedimos amablemente que esta celebración sea solo para adultos, así podrán disfrutar cada momento con nosotros.</p>
+      </div>
+    </section>
+
     <section class="sec-dark">
+      <svg class="floral-corner tl" viewBox="0 0 160 160" aria-hidden="true">
+        <g fill="none" stroke="#f5efe6" stroke-width="1.1" opacity="0.8">
+          <path d="M18 140c22-36 40-62 52-98"/>
+          <circle cx="70" cy="28" r="4.5" fill="#f7efe4" stroke="none" opacity="0.85"/>
+          <circle cx="84" cy="44" r="3.5" fill="#efe4d4" stroke="none" opacity="0.8"/>
+          <circle cx="60" cy="50" r="2.8" fill="#f7efe4" stroke="none" opacity="0.75"/>
+        </g>
+      </svg>
       <div class="reveal">
         <div class="icon-wrap" aria-hidden="true">
           <svg viewBox="0 0 48 48"><rect x="10" y="18" width="28" height="22" rx="2"/><path d="M10 24h28"/><path d="M24 18v-4a6 6 0 0 1 12 0"/><path d="M24 18v-4a6 6 0 0 0-12 0"/><path d="M24 18v22"/></svg>

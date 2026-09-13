@@ -372,6 +372,32 @@
       text-transform: uppercase;
       opacity: 0.85;
     }
+    .guests-box {
+      width: min(42vw, 148px);
+      aspect-ratio: 1;
+      margin: 1.1rem auto 0.85rem;
+      border: 1.5px solid rgba(255, 253, 249, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 253, 249, 0.06);
+    }
+    .guests-box .num {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-size: clamp(4.2rem, 18vw, 5.8rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--white);
+    }
+    .guests-caption {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      opacity: 0.95;
+    }
     .countdown-main {
       display: flex;
       justify-content: center;
@@ -808,8 +834,10 @@
       <div class="reveal">
         <p class="label" style="margin-bottom:0.35rem;">Cupo reservado</p>
         <h2 class="script-title">Esta invitación</h2>
-        <p class="place-name" style="font-size:clamp(2rem,8vw,2.6rem);letter-spacing:0.08em;">2</p>
-        <p class="body-text" style="margin-top:0.35rem;">invitados</p>
+        <div class="guests-box" aria-label="2 invitados">
+          <span class="num">2</span>
+        </div>
+        <p class="guests-caption">invitados</p>
         <p class="body-text">Hemos reservado un lugar especial para ustedes. Esta invitación es válida para dos personas.</p>
       </div>
     </section>

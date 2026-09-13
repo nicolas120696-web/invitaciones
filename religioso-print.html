@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matrimonio Religioso | Sara & Joselito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #f7f1e8;
+      --mocha: #7d654c;
+      --deep: #5c4a38;
+      --ink: #3a2f24;
+      --white: #fffdf9;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--ink);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      max-width: 420px;
+      margin: 0 auto;
+      background: var(--cream);
+    }
+    .hero {
+      min-height: 520px;
+      background:
+        linear-gradient(180deg, rgba(20,15,12,0.15) 0%, rgba(20,15,12,0.78) 100%),
+        url("fotos/beso.jpg") center 28% / cover no-repeat;
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      padding: 2.5rem 1.4rem;
+    }
+    .name-frame {
+      border: 1px solid rgba(255,253,249,0.8);
+      padding: 0.9rem 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+    .name-frame h1 {
+      font-weight: 400;
+      font-size: 1.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .meta { letter-spacing: 0.12em; font-size: 0.95rem; opacity: 0.95; }
+    .sec {
+      padding: 2.4rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sec-dark { background: linear-gradient(180deg, #7d654c, #5c4a38); color: var(--white); }
+    .sec-light { background: #fbf7f1; color: var(--ink); }
+    .sec-cream { background: #efe6d8; color: var(--ink); }
+    .script {
+      font-family: "Great Vibes", cursive;
+      font-size: 2.3rem;
+      margin: 0.4rem 0 0.9rem;
+    }
+    .label {
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      opacity: 0.85;
+    }
+    .place { font-size: 1.35rem; margin: 0.3rem 0; }
+    .text { font-size: 1.05rem; line-height: 1.65; max-width: 22rem; margin: 0.5rem auto; opacity: 0.92; }
+    .verse { font-style: italic; font-size: 1.1rem; line-height: 1.55; max-width: 22rem; margin: 0 auto 0.6rem; }
+    .cite { letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.68rem; font-style: normal; opacity: 0.8; }
+    .date-day {
+      font-style: italic;
+      font-size: 4.5rem;
+      line-height: 0.9;
+      margin: 0.4rem 0;
+    }
+    .photo {
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 1rem;
+      display: block;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+    }
+    .guests-box {
+      width: 140px;
+      height: 140px;
+      margin: 1rem auto 0.7rem;
+      border: 1.5px solid rgba(255,253,249,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .guests-box .num {
+      font-size: 5.2rem;
+      line-height: 1;
+      font-weight: 400;
+    }
+    .guests-caption {
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-size: 1.05rem;
+      margin-bottom: 0.8rem;
+    }
+    .footer { height: 40px; background: var(--mocha); }
+    @page { size: A4; margin: 0; }
+    @media print {
+      .page { max-width: none; }
+      .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .sec-dark, .sec-cream, .footer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="name-frame"><h1>Sara &amp; Joselito</h1></div>
+      <p class="meta">10.10.26 | Nuestra Boda</p>
+    </header>
+
+    <section class="sec sec-dark">
+      <p class="text">Con la bendición y el amor de Dios, Él escribió nuestra historia, y queremos que seas parte de este hermoso día.</p>
+      <p class="verse">“Así que ya no son dos, sino uno solo. Por tanto, lo que Dios ha unido, no lo separe el hombre.”</p>
+      <p class="cite">Mateo 19:6</p>
+      <p class="label" style="margin-top:1.5rem;">Octubre</p>
+      <p class="date-day">10</p>
+      <p class="label">Sábado · 2026 · 7:00 p. m.</p>
+    </section>
+
+    <section class="sec sec-light">
+      <img class="photo" src="fotos/mirada-mar.jpg" alt="Sara y Joselito" />
+      <p class="script">Ceremonia</p>
+      <p class="place">Iglesia Cristiana Ebenezer</p>
+      <p class="text">7:00 p. m.</p>
+    </section>
+
+    <section class="sec sec-cream">
+      <p class="script">Recepción</p>
+      <p class="place">Av. Santa Elvira Mz D Lt 1</p>
+      <p class="text">Urb. El Olivar, Los Olivos · Al finalizar la ceremonia, los esperamos para celebrar juntos.</p>
+    </section>
+
+    <section class="sec sec-light">
+      <p class="script">Código de vestimenta</p>
+      <p class="place">Formal / Elegante</p>
+    </section>
+
+    <section class="sec sec-cream">
+      <p class="script">Una noche especial</p>
+      <p class="text">Con el deseo de compartir una velada tranquila y memorable junto a ustedes, les pedimos amablemente que esta celebración sea solo para adultos, así podrán disfrutar cada momento con nosotros.</p>
+    </section>
+
+    <section class="sec sec-dark">
+      <p class="script">Sugerencia de regalo</p>
+      <p class="text">El mejor regalo es tu presencia. Si desean un detalle adicional:</p>
+      <p class="place" style="margin-top:1rem;">Yape / Plin</p>
+      <p class="text">947 499 265</p>
+      <p class="place" style="margin-top:1rem;">Cuenta BCP</p>
+      <p class="text">194-01181098-0-27</p>
+    </section>
+
+    <section class="sec sec-light">
+      <p class="script">Confirmación</p>
+      <p class="text">Agradecemos que confirmes tu asistencia al WhatsApp: 947 499 265</p>
+    </section>
+
+    <section class="sec sec-dark">
+      <p class="label">Cupo reservado</p>
+      <p class="script">Esta invitación</p>
+      <div class="guests-box"><span class="num">2</span></div>
+      <p class="guests-caption">invitados</p>
+      <p class="text">Hemos reservado un lugar especial para ustedes. Esta invitación es válida para dos personas.</p>
+    </section>
+    <div class="footer"></div>
+  </div>
+</body>
+</html>
